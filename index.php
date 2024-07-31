@@ -76,6 +76,28 @@ $outputAgeMatch = match (true) {
 ?>
 <h2><?= "Match 2: $outputAgeMatch" ?></h2>
 
+<!-- Array -->
+<?php
+// Declaracion array
+$bestLanguages = ["PHP", "Javascript"];
+// Agregar elementos al final del array
+$bestLanguages[] = "TypeScript";
+$bestLanguages[] = "Python";
+
+// Sustituir elementos del array
+$bestLanguages[2] = "Java";
+?>
+
+<h3>
+    Array posición 0: <?= $bestLanguages[0] ?>
+</h3>
+
+<h3>Array $bestLanguages:</h3>
+<ul>
+    <?php foreach ($bestLanguages as $key => $language) :?>
+        <li> <?=$key. " ". " ".  $language?> </li>
+    <?php endforeach;?>
+</ul>
 
 <!-- //Imagenes -->
 <img src="<?= LOGO_URL ?>" alt="PHP Logo" width="200">
