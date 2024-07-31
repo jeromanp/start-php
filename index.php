@@ -88,15 +88,29 @@ $bestLanguages[] = "Python";
 $bestLanguages[2] = "Java";
 ?>
 
+<!-- Diccionario con Array -->
+<?php
+$person = [
+    "name" => "Jose",
+    "age" => 33,
+    "city" => "México",
+    "hobbies" => ["Soccer", "Gaming", "TV"]
+];
+// cambiar elementos del diccionario
+$person["name"] = "Jose Eduardo";
+// Agregar elementos
+$person["isDev"][] = true;
+?>
+
 <h3>
     Array posición 0: <?= $bestLanguages[0] ?>
 </h3>
 
 <h3>Array $bestLanguages:</h3>
 <ul>
-    <?php foreach ($bestLanguages as $key => $language) :?>
-        <li> <?=$key. " ". " ".  $language?> </li>
-    <?php endforeach;?>
+    <?php foreach ($bestLanguages as $key => $language) : ?>
+        <li> <?= $key . " " . " " .  $language ?> </li>
+    <?php endforeach; ?>
 </ul>
 
 <!-- //Imagenes -->
